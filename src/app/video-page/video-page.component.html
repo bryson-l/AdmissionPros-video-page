@@ -1,11 +1,10 @@
 <div class="row">
-    <div *ngFor="let video of videos; let i = index" class="col-lg-2">
-        <img src="{{video.thumbnail}}">
-        <div class="row">
-            
+    <div *ngFor="let video of videos; let i = index" class="col-lg-2" style="margin-top: 10px;">
+        <div class="row" style="margin:0 auto;">
+            <img [src]="video.thumbnail" alt="Video Thumbnail">
         </div>
-        <div class="row">
-            <p>{{video.title}}</p>
+        <div class="row" style="font-size:10px;font-weight:bold;text-align:center;margin:0 auto;">
+            <p style="text-align: center;margin:0 auto;">{{video.title}}</p>
         </div>
     </div>
 </div>

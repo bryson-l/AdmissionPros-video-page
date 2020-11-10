@@ -12,9 +12,8 @@ export class VideoPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  videos: object[] = [{title: "SAMPLE TEXT", thumbnail: "../thumbnail-images/apLogo1.jpg"},
-                      {title: "ANOTHER VIDEO", thumbnail: "../thumbnail-images/apLogo1.jpg"},
-                      {title: "AND ANOTHA ONE", thumbnail: "../thumbnail-images/apLogo1.jpg"},
-                      {title: "AND ANOTHA ANOTHA VIDEO", thumbnail: "../thumbnail-images/apLogo1.jpg"}]
-
+  videos: object[] = [{title: "SAMPLE TEXT", thumbnail: "/assets/120-gif.gif"},
+                      {title: "ANOTHER VIDEO", thumbnail: "/assets/120-gif.gif"},
+                      {title: "AND ANOTHA ONE", thumbnail: "/assets/120-gif.gif"},
+                      {title: "AND ANOTHA ANOTHA VIDEO", thumbnail: "/assets/120-gif.gif"}]
 }
