@@ -19,7 +19,7 @@ export class VideoPageComponent implements OnInit {
   videoData: VideoModel[] = [];
 
   ngOnInit(): void {
-    this.youtubeService.getYoutubeChannel('UC3HjB3X8jeENm46HCkI0Inw')
+    this.youtubeService.getYoutubeChannel('UCxdeYyA-nTo1Y9slBixgcGA')
                        .subscribe(data => {
                         data.items.forEach(item => {
                           if (item.id.videoId) {
