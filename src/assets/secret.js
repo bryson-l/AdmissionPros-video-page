@@ -1,1 +1,0 @@
-export let apiString = 'AIzaSyD0iYq4TzP6M0UHlc6Xv28oTWhRysOpDu8'
