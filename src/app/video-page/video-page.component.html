@@ -1,13 +1,13 @@
 <div class="row" style="margin-left:5px;">
     <div *ngFor="let video of videoData; let i = index" class="col-lg-3 col-md-6 col-sm-12">
-        <div class="row" style="margin-top:15px;">
-            <div class="row">
-                <iframe id="ytplayer" type="text/html" width="359" height="180"
+        <div class="row" style="margin-top:10px;">
+            <div class="embed-reponsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" type="text/html"
                 [src]="video.videoUrl"
                 frameborder="0"></iframe>
             </div>
-            <div class="row" style="border-left: 1px solid grey;border-right: 1px solid grey; border-bottom: 1px solid grey;width:100%">
-                <p>{{video.localized.title}}</p>
+             <div class="row" style="width: 74.85%;margin-left:0;margin-top:-2%;border-left: 1px solid rgba(182, 168, 168, 0.568);border-right: 1px solid rgba(182, 168, 168, 0.568); border-bottom: 1px solid rgba(182, 168, 168, 0.568);">
+                <p style="text-align:center;margin:0 auto;font: 'Arial';">{{video.localized.title}}</p>
             </div>
         </div>
     </div>
