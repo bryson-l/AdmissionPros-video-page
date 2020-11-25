@@ -8,16 +8,16 @@
     </div>
 </div>
 <div class="row" style="margin-left:5px;">
-    <div *ngFor="let video of videoData; let i = index" class="col-lg-3 col-md-6 col-sm-12">
+    <div *ngFor="let video of videoData | paginate: {itemsPerPage:10, currentPage: p}" class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
         <div class="row" style="margin-top:10px;">
-            <div class="embed-reponsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" type="text/html"
-                [src]="video.videoUrl"
+            <div class="row">
+                <iframe type="text/html"
+                [src]="video.url"
                 frameborder="0"></iframe>
-            </div>
-             <div class="row" style="width: 74.85%;margin-left:0;margin-top:-2%;border-left: 1px solid rgba(182, 168, 168, 0.568);border-right: 1px solid rgba(182, 168, 168, 0.568); border-bottom: 1px solid rgba(182, 168, 168, 0.568);">
-                <p style="text-align:center;margin:0 auto;font: 'Arial';">{{video.localized.title}}</p>
             </div>
         </div>
     </div>
+</div>
+<div class="row">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
 </div>
