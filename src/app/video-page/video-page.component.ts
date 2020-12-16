@@ -30,7 +30,7 @@ export class VideoPageComponent implements OnInit {
                           this.videoIds.map(videoId => {
                             let temp = {videoId: null, url: null}
                             temp.videoId = videoId
-                            temp.url = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/'+ videoId + '?autoplay=1')
+                            temp.url = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/'+ videoId + '?autoplay=0')
                             this.videoData.push(temp)
                           })
                           console.log(this.videoData)
