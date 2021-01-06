@@ -1,23 +1,24 @@
-<div class="row" style="margin-left:5px;margin-top:10px;">
+<div class="row" style="margin-left:5px;margin-top:10px;"><!-- feel free to remove any inline styles used, this was my hacky way to make it not look like crap -->
     <div class="row col-lg-4 form-group">
         <label for="search">Search</label>
-        <input class="form-control" type="text" id="search" name="search" placeholder="Enter search criteria">
+        <input class="form-control" type="text" placeholder="Enter search criteria" [(ngModel)]="searchCriteria"> <!-- this will need to be replaced with aptextbox -->
         <div class="row" style="margin-top:5px;margin-left:0;">
-            <button type="button" class="btn btn-primary">Search</button>
+            <button type="button" class="btn btn-primary" (click)="onSearchClick()">Search</button>
         </div>
     </div>
 </div>
 <div class="row" style="margin-left:5px;">
-    <div *ngFor="let video of videoData | paginate: {itemsPerPage:12, currentPage: p}" class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+    <div *ngFor="let video of videoData | paginate: {itemsPerPage:12, currentPage: p}" class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12"><!--this pipe requires 'ngx-pagination' from npm-->
         <div class="row" style="margin-top:10px;">
             <div class="row">
+                <!-- can also hardcode the width and height with the 'width' and 'height' attributes -->
                 <iframe type="text/html"
-                [src]="video.url"
+                [src]="video.VideoUrl"
                 frameborder="0"></iframe>
             </div>
         </div>
     </div>
 </div>
 <div class="row" style="margin-top:10px;">
-    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls><!-- this will also require ngx-pagination -->
 </div>

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ChartComponent } from './chart/chart.component';
 import { VideoPageComponent } from './video-page/video-page.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
   imports: [
     BrowserModule,
     HttpClientModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
