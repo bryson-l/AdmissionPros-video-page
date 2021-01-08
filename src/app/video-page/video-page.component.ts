@@ -19,6 +19,12 @@ export class VideoPageComponent implements OnInit {
   p: number = 1; // required variable for the ngx-pagination
   searchCriteria: string = '';
 
+  /*
+  When adding videos to the database, they must have the following format for the VideoUrl column:
+  "https://www.youtube.com/embed/VIDEO_ID?autoplay=0"
+  this is a proper link that will embed into an iframe like the corresponding HTML file
+  */
+
   ngOnInit(): void {
       this.videoVaultService.getVideos()
                             .subscribe(data => {
